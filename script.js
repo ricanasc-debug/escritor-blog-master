@@ -394,6 +394,7 @@ class EscritorEngine {
         // Simulando delay de geração
         setTimeout(() => {
             const isDiscover = this.state.config.discoverMode;
+            const isVlog = this.state.config.persona === 'vlog' || this.state.config.persona === 'dark_review';
             const articleLength = isDiscover ? 'APROX. 600 PALAVRAS (FOCO EM HYPE)' : 'APROX. 1500 PALAVRAS (FOCO EM SEO)';
             const articleContent = isDiscover ? 
                 `[CONTEÚDO VIRAL DISCOVER ATIVADO]\n\nEste artigo foi sintetizado com gatilhos de curiosidade, frases curtas e foco em leitura mobile ultra-rápida. Extensão ideal para o feed do Google: 580 palavras.\n\nLink Afiliado Sugerido: link.amazon.com/produto-nicho-hype` :
